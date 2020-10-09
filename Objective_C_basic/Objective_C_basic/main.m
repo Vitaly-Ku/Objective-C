@@ -30,4 +30,5 @@ int main(int argc, const char * argv[]) {
         NSLog(@"___среднее число___ %f",  (first + second + third) / 3); // тут хорошо бы положить все переменные в массив и делить на массив.count, а не на цифру 3
     }
     return 0;
+    
 }
