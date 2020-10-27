@@ -1,5 +1,5 @@
 //
-//  Printer.h
+//  Message.h
 //  lesson_6
 //
 //  Created by Vit K on 27.10.2020.
