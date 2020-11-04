@@ -18,6 +18,7 @@
 #define PADDLE_WIDTH 90
 #define WHITE_COLOR [UIColor whiteColor]
 #define SCORE_FONT [UIFont systemFontOfSize:40.0 weight:UIFontWeightLight]
+#define CENTER_POINT CGPointMake(HALF_SCREEN_WIDTH, HALF_SCREEN_HEIGHT);
 
 @interface GameViewController : UIViewController
 
@@ -37,3 +38,4 @@
 - (void)config;
 
 @end
+
