@@ -12,12 +12,13 @@
 		5D4D65FB255BB5A800ED1353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D65FA255BB5A800ED1353 /* Assets.xcassets */; };
 		5D4D65FE255BB5A800ED1353 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D65FC255BB5A800ED1353 /* LaunchScreen.storyboard */; };
 		5D4D6601255BB5A800ED1353 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D6600255BB5A800ED1353 /* main.m */; };
-		5D4D6609255BB69000ED1353 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D6608255BB69000ED1353 /* DataManager.m */; };
-		5D4D6612255BB6D500ED1353 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D660C255BB6D500ED1353 /* Country.m */; };
-		5D4D6613255BB6D500ED1353 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D660E255BB6D500ED1353 /* City.m */; };
-		5D4D6614255BB6D500ED1353 /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D660F255BB6D500ED1353 /* Airport.m */; };
-		5D4D661A255BB7E000ED1353 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D6617255BB7E000ED1353 /* MainViewController.m */; };
-		5D4D661B255BB7E000ED1353 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D6618255BB7E000ED1353 /* SecondViewController.m */; };
+		5DFE21FC2561502D0077A89F /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE21FB2561502D0077A89F /* DataManager.m */; };
+		5DFE2204256150390077A89F /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE21FE256150390077A89F /* Country.m */; };
+		5DFE2205256150390077A89F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE2200256150390077A89F /* City.m */; };
+		5DFE2206256150390077A89F /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE2201256150390077A89F /* Airport.m */; };
+		5DFE220E256150540077A89F /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE2209256150540077A89F /* CityTableViewCell.m */; };
+		5DFE220F256150540077A89F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE220A256150540077A89F /* MainViewController.m */; };
+		5DFE2210256150540077A89F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE220C256150540077A89F /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,18 +31,20 @@
 		5D4D65FD255BB5A800ED1353 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D4D65FF255BB5A800ED1353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D4D6600255BB5A800ED1353 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5D4D6608255BB69000ED1353 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		5D4D660A255BB6A100ED1353 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		5D4D660C255BB6D500ED1353 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
-		5D4D660D255BB6D500ED1353 /* Airport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
-		5D4D660E255BB6D500ED1353 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
-		5D4D660F255BB6D500ED1353 /* Airport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
-		5D4D6610255BB6D500ED1353 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
-		5D4D6611255BB6D500ED1353 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		5D4D6616255BB7E000ED1353 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		5D4D6617255BB7E000ED1353 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		5D4D6618255BB7E000ED1353 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		5D4D6619255BB7E000ED1353 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5DFE21FA2561502D0077A89F /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		5DFE21FB2561502D0077A89F /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		5DFE21FE256150390077A89F /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		5DFE21FF256150390077A89F /* Airport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
+		5DFE2200256150390077A89F /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		5DFE2201256150390077A89F /* Airport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
+		5DFE2202256150390077A89F /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		5DFE2203256150390077A89F /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		5DFE2208256150540077A89F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5DFE2209256150540077A89F /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		5DFE220A256150540077A89F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5DFE220B256150540077A89F /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
+		5DFE220C256150540077A89F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5DFE220D256150540077A89F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +77,13 @@
 		5D4D65ED255BB5A700ED1353 /* TicketsApp */ = {
 			isa = PBXGroup;
 			children = (
-				5D4D6607255BB67500ED1353 /* Services */,
-				5D4D660B255BB6D500ED1353 /* Models */,
+				5DFE21F92561502D0077A89F /* Services */,
+				5DFE21FD256150390077A89F /* Models */,
+				5DFE2207256150540077A89F /* ViewControllers */,
 				5D4D65EE255BB5A700ED1353 /* AppDelegate.h */,
 				5D4D65EF255BB5A700ED1353 /* AppDelegate.m */,
 				5D4D65F1255BB5A700ED1353 /* SceneDelegate.h */,
 				5D4D65F2255BB5A700ED1353 /* SceneDelegate.m */,
-				5D4D6615255BB7E000ED1353 /* ViewControllers */,
 				5D4D65FA255BB5A800ED1353 /* Assets.xcassets */,
 				5D4D65FC255BB5A800ED1353 /* LaunchScreen.storyboard */,
 				5D4D65FF255BB5A800ED1353 /* Info.plist */,
@@ -89,35 +92,38 @@
 			path = TicketsApp;
 			sourceTree = "<group>";
 		};
-		5D4D6607255BB67500ED1353 /* Services */ = {
+		5DFE21F92561502D0077A89F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5D4D660A255BB6A100ED1353 /* DataManager.h */,
-				5D4D6608255BB69000ED1353 /* DataManager.m */,
+				5DFE21FA2561502D0077A89F /* DataManager.h */,
+				5DFE21FB2561502D0077A89F /* DataManager.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		5D4D660B255BB6D500ED1353 /* Models */ = {
+		5DFE21FD256150390077A89F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5D4D6610255BB6D500ED1353 /* Country.h */,
-				5D4D660C255BB6D500ED1353 /* Country.m */,
-				5D4D6611255BB6D500ED1353 /* City.h */,
-				5D4D660E255BB6D500ED1353 /* City.m */,
-				5D4D660D255BB6D500ED1353 /* Airport.h */,
-				5D4D660F255BB6D500ED1353 /* Airport.m */,
+				5DFE2202256150390077A89F /* Country.h */,
+				5DFE21FE256150390077A89F /* Country.m */,
+				5DFE21FF256150390077A89F /* Airport.h */,
+				5DFE2201256150390077A89F /* Airport.m */,
+				5DFE2203256150390077A89F /* City.h */,
+				5DFE2200256150390077A89F /* City.m */,
 			);
-			path = Models;
+			name = Models;
+			path = "../../../../../Downloads/AviaTicketsObjc-lesson-2/AviaTickets/AviaTickets/Models";
 			sourceTree = "<group>";
 		};
-		5D4D6615255BB7E000ED1353 /* ViewControllers */ = {
+		5DFE2207256150540077A89F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D4D6619255BB7E000ED1353 /* MainViewController.h */,
-				5D4D6617255BB7E000ED1353 /* MainViewController.m */,
-				5D4D6616255BB7E000ED1353 /* SecondViewController.h */,
-				5D4D6618255BB7E000ED1353 /* SecondViewController.m */,
+				5DFE220D256150540077A89F /* MainViewController.h */,
+				5DFE220A256150540077A89F /* MainViewController.m */,
+				5DFE2208256150540077A89F /* SecondViewController.h */,
+				5DFE220C256150540077A89F /* SecondViewController.m */,
+				5DFE220B256150540077A89F /* CityTableViewCell.h */,
+				5DFE2209256150540077A89F /* CityTableViewCell.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,15 +197,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4D661B255BB7E000ED1353 /* SecondViewController.m in Sources */,
-				5D4D6609255BB69000ED1353 /* DataManager.m in Sources */,
 				5D4D65F0255BB5A700ED1353 /* AppDelegate.m in Sources */,
+				5DFE21FC2561502D0077A89F /* DataManager.m in Sources */,
+				5DFE2210256150540077A89F /* SecondViewController.m in Sources */,
+				5DFE220E256150540077A89F /* CityTableViewCell.m in Sources */,
+				5DFE2206256150390077A89F /* Airport.m in Sources */,
+				5DFE220F256150540077A89F /* MainViewController.m in Sources */,
+				5DFE2205256150390077A89F /* City.m in Sources */,
 				5D4D6601255BB5A800ED1353 /* main.m in Sources */,
-				5D4D661A255BB7E000ED1353 /* MainViewController.m in Sources */,
-				5D4D6612255BB6D500ED1353 /* Country.m in Sources */,
-				5D4D6614255BB6D500ED1353 /* Airport.m in Sources */,
-				5D4D6613255BB6D500ED1353 /* City.m in Sources */,
 				5D4D65F3255BB5A700ED1353 /* SceneDelegate.m in Sources */,
+				5DFE2204256150390077A89F /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

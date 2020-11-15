@@ -31,5 +31,14 @@
     return self;
 }
 
+-(instancetype)initWithName:(NSString *) name AndAbbr:(NSString *)abbr AndCountry:(NSString *) country{
+    self = [super init];
+    if (self) {
+        _name = name;
+        _countryCode = country;
+        _code = abbr;
+    }
+    return self;
+}
 
 @end
