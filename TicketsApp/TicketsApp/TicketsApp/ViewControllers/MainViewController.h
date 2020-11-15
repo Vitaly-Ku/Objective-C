@@ -1,6 +1,6 @@
 //
 //  MainViewController.h
-//  AviaTickets
+//  TicketsApp
 //
 //  Created by Vit K on 11.11.2020.
 //  Copyright © 2020 Vit K. All rights reserved.
@@ -11,6 +11,7 @@
 
 @interface MainViewController : UIViewController
 
-@property (strong, nonatomic) SecondViewController *secondViewController;
+@property (strong, nonatomic) SecondViewController *placeViewController;
 
 @end
+
