@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  TicketsApp
+//  AviaTickets
 //
 //  Created by Vit K on 11.11.2020.
 //  Copyright © 2020 Vit K. All rights reserved.
@@ -48,11 +48,11 @@
 }
 
 - (void)changeColorButtonDidTap:(UIButton *)sender {
-    if(self.placeViewController == nil){
+    if(self.secondViewController == nil){
         SecondViewController *secondView = [[SecondViewController alloc] init];
-        self.placeViewController = secondView;
+        self.secondViewController = secondView;
     }
-    [self.navigationController pushViewController:self.placeViewController animated:NO];
+    [self.navigationController pushViewController:self.secondViewController animated:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

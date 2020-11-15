@@ -82,8 +82,6 @@
 
 - (NSArray *)cities
 {
-   City *city = [[City alloc] initWithName:@"Москва" AndAbbr:@"SVO" AndCountry:@"Россия"];
-    _citiesArray = [[NSMutableArray alloc] initWithObjects:city, nil];
     return _citiesArray;
 }
 
