@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "DataManager.h"
 #import "SecondViewController.h"
+#import "NewsAPIManager.h"
 
 @implementation MainViewController
 
@@ -47,12 +48,17 @@
     [self.view addSubview:button];
 }
 
-- (void)changeColorButtonDidTap:(UIButton *)sender {
-    if(self.placeViewController == nil){
-        SecondViewController *secondView = [[SecondViewController alloc] init];
-        self.placeViewController = secondView;
-    }
-    [self.navigationController pushViewController:self.placeViewController animated:NO];
+- (void)changeColorButtonDidTap:(UIButton *)sender
+{
+    [[NewsAPIManager sharedInstance] getNews:^(NSArray *array) {
+        
+        if(self.secondViewController == nil){
+            SecondViewController *secondView = [[SecondViewController alloc] init];
+            secondView.news = array;
+            self.secondViewController = secondView;
+        }
+        [self.navigationController pushViewController:self.secondViewController animated:YES];
+     }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
