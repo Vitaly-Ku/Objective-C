@@ -2,29 +2,27 @@
 //  SecondViewController.h
 //  TicketsApp
 //
-//  Created by Vit K on 11.11.2020.
+//  Created by Vit K on 18.11.2020.
 //  Copyright © 2020 Vit K. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "DataManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef enum PlaceType {
-    PlaceTypeArrival,
-    PlaceTypeDeparture
-} PlaceType;
+@interface NewsTableViewCell : UITableViewCell
 
-@protocol PlaceViewControllerDelegate <NSObject>
-- (void)selectPlace:(id)place withType:(PlaceType)placeType andDataType:(DataSourceType)dataType;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *articleLabel;
+
+@end
+
+@protocol SecondViewControllerDelegate <NSObject>
+
 @end
 
 @interface SecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) id<PlaceViewControllerDelegate>delegate;
-
-- (instancetype)initWithType:(PlaceType)type;
-
+@property (nonatomic, strong) NSArray *news;
 @end
 
 NS_ASSUME_NONNULL_END

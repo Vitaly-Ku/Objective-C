@@ -11,7 +11,7 @@
 
 @interface MainViewController : UIViewController
 
-@property (strong, nonatomic) SecondViewController *placeViewController;
+@property (strong, nonatomic) SecondViewController *secondViewController;
 
 @end
 
