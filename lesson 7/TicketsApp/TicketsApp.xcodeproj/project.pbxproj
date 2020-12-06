@@ -28,6 +28,7 @@
 		5D5973E1256AA4ED004B2B5F /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5973DA256AA4ED004B2B5F /* Airport.m */; };
 		5D5973E2256AA4ED004B2B5F /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5973DC256AA4ED004B2B5F /* Ticket.m */; };
 		5D5973E3256AA4ED004B2B5F /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5973DE256AA4ED004B2B5F /* MapPrice.m */; };
+		5D96C982257CCEFB00C03730 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D96C97F257CCEFB00C03730 /* Localizable.strings */; };
 		5DE03E162573A26B009570C1 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE03E142573A26B009570C1 /* CoreDataHelper.m */; };
 		5DE03E192573A2E9009570C1 /* FavoriteTicket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DE03E172573A2E9009570C1 /* FavoriteTicket.xcdatamodeld */; };
 		5DE03E1E2573A300009570C1 /* FavoriteTicket+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE03E1A2573A2FF009570C1 /* FavoriteTicket+CoreDataClass.m */; };
@@ -82,6 +83,9 @@
 		5D5973DC256AA4ED004B2B5F /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		5D5973DD256AA4ED004B2B5F /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		5D5973DE256AA4ED004B2B5F /* MapPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
+		5D96C97C257CCE8C00C03730 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5D96C980257CCEFB00C03730 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "../../../../Downloads/AviaTicketsObjc-lesson-8/AviaTickets/ru.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5D96C981257CCEFB00C03730 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../../../../Downloads/AviaTicketsObjc-lesson-8/AviaTickets/en.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5DE03E142573A26B009570C1 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		5DE03E152573A26B009570C1 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		5DE03E182573A2E9009570C1 /* FavoriteTicket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteTicket.xcdatamodel; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		5D4D65E2255BB5A700ED1353 = {
 			isa = PBXGroup;
 			children = (
+				5D96C97F257CCEFB00C03730 /* Localizable.strings */,
 				5D4D65ED255BB5A700ED1353 /* TicketsApp */,
 				5D4D65EC255BB5A700ED1353 /* Products */,
 				DC524C50B2A9900988C2C7BC /* Pods */,
@@ -292,6 +297,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5D4D65E2255BB5A700ED1353;
 			productRefGroup = 5D4D65EC255BB5A700ED1353 /* Products */;
@@ -310,6 +316,7 @@
 			files = (
 				5D4D65FE255BB5A800ED1353 /* LaunchScreen.storyboard in Resources */,
 				5D533862256A9EC800E70C4F /* cities.json in Resources */,
+				5D96C982257CCEFB00C03730 /* Localizable.strings in Resources */,
 				5D4D65FB255BB5A800ED1353 /* Assets.xcassets in Resources */,
 				5D533861256A9EC800E70C4F /* countries.json in Resources */,
 				5D53385E256A9EBA00E70C4F /* airports.json in Resources */,
@@ -401,8 +408,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				5D4D65FD255BB5A800ED1353 /* Base */,
+				5D96C97C257CCE8C00C03730 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5D96C97F257CCEFB00C03730 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D96C980257CCEFB00C03730 /* ru */,
+				5D96C981257CCEFB00C03730 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -412,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -470,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
