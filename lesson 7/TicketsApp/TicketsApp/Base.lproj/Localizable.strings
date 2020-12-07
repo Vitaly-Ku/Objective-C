@@ -1,0 +1,46 @@
+
+//  Localizable.strings
+//  TicketsApp
+//
+//  Created by Vit K on 06.12.2020.
+//  Copyright © 2020 Vit K. All rights reserved.
+//
+
+// TabBarController
+
+"search_tab" = "Search";
+"map_tab" = "Price map";
+"favorites_tab" = "Favorites";
+
+// MainViewController
+
+"main_from" = "From";
+"main_to" = "To";
+"main_search" = "Find";
+"oh" = "Ooh!";
+"oh_message" = "No tickets found!";
+"close_message" = "Close";
+
+// TicketsViewController
+
+"tickets_title" = "Tickets";
+"add_to_favorite" = "Add to favorites";
+"remove_from_favorite" = "Remove to favorites";
+"remind_me" = "Remind about ticket";
+"notification_will_be_sent" = "Notification will be sent";
+"success" = "Success";
+"rub" = "RUB";
+"for" = "for";
+"from_map" = "from map";
+"from_list" = "from list";
+
+//PlaceViewController
+
+"cities" = "Cities";
+"airports" = "Airports";
+
+// Alerts
+"error" = "Error";
+"actions_with_tickets" = "Actions with tickets";
+"actions_with_tickets_describe" = "What to do with the selected ticket?";
+"not_determine_current_city" = "Couldn't find the current city!";

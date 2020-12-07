@@ -92,9 +92,9 @@
 - (void)setTicket:(Ticket *)ticket {
     _ticket = ticket;
     if ([ticket isKindOfClass:[Ticket class]]){
-        _priceLabel.text = [NSString stringWithFormat:@"%@ руб.", ticket.price];
+        _priceLabel.text = [NSString stringWithFormat:@"%@ %@.", ticket.price, NSLocalizedString(@"rub", @"")];
     } else {
-        _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", ((FavoriteTicket *)ticket).price];
+        _priceLabel.text = [NSString stringWithFormat:@"%lld %@.", ((FavoriteTicket *)ticket).price, NSLocalizedString(@"rub", @"")];
     }
     _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", ticket.from, ticket.to];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

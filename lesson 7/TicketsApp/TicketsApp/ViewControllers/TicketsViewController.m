@@ -31,7 +31,7 @@
     if (self) {
         isFavorites = YES;
         self.tickets = [NSArray new];
-        self.title = @"Избранное";
+        self.title = NSLocalizedString(@"favorites_tab", @"");
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.tableView registerClass:[TicketTableViewCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
     }
@@ -44,7 +44,7 @@
     {
         _tickets = tickets;
         _fromMap = fromMap;
-        self.title = @"Билеты";
+        self.title = NSLocalizedString(@"tickets_title", @"");
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.tableView registerClass:[TicketTableViewCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
     }
@@ -74,7 +74,7 @@
 }
 -(void)viewDidLoad{
     if (isFavorites) {
-        _segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"из Списка", @"из Карты"]];
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:@[NSLocalizedString(@"from_list", @""), NSLocalizedString(@"from_map", @"")]];
         [_segmentedControl addTarget:self action:@selector(changeSource) forControlEvents:UIControlEventValueChanged];
         _segmentedControl.tintColor = [UIColor blackColor];
         self.navigationItem.titleView = _segmentedControl;
@@ -85,9 +85,6 @@
     self.datePicker = [UIDatePicker new];
     self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
     self.datePicker.minimumDate = [NSDate date];
-    if (@available(iOS 14.0, *)) {
-        self.datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
-    }
     
     UIToolbar *keyboardToolbar = [[UIToolbar alloc] init];
     [keyboardToolbar sizeToFit];
@@ -145,21 +142,21 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Действия с билетом" message:@"Что необходимо сделать с выбранным билетом?" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *favoriteAction;
     if ([[CoreDataHelper sharedInstance] isFavorite: [_tickets objectAtIndex:indexPath.row]]) {
-        favoriteAction = [UIAlertAction actionWithTitle:@"Удалить из избранного" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        favoriteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"remove_from_favorite", @"") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             [[CoreDataHelper sharedInstance] removeFromFavorite:[self->_tickets objectAtIndex:indexPath.row]];
         }];
     } else {
-        favoriteAction = [UIAlertAction actionWithTitle:@"Добавить в избранное" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        favoriteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"add_to_favorite", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [[CoreDataHelper sharedInstance] addToFavorite:[self->_tickets objectAtIndex:indexPath.row]];
         }];
     }
     
-    UIAlertAction *notificationAction = [UIAlertAction actionWithTitle:@"Напомнить" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *notificationAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"remind_me", @"") style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
         self->notificationCell = [tableView cellForRowAtIndexPath:indexPath];
         [self.dateTextField becomeFirstResponder];
     }];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"close_message", @"") style:UIAlertActionStyleCancel handler:nil];
     [alertController addAction:favoriteAction];
     [alertController addAction:notificationAction];
     [alertController addAction:cancelAction];
@@ -171,7 +168,7 @@
 - (void)doneButtonDidTap:(UIBarButtonItem *)sender
 {
     if (_datePicker.date && notificationCell) {
-        NSString *message = [NSString stringWithFormat:@"%@ - %@ за %@ руб.", notificationCell.ticket.from, notificationCell.ticket.to, notificationCell.ticket.price];
+        NSString *message = [NSString stringWithFormat:@"%@ - %@ %@ %@ %@.", notificationCell.ticket.from, notificationCell.ticket.to, NSLocalizedString(@"for", @""), notificationCell.ticket.price, NSLocalizedString(@"rub", @"")];
         
         NSURL *imageURL;
         if (notificationCell.airlineLogoView.image) {
@@ -185,11 +182,11 @@
             imageURL = [NSURL fileURLWithPath:path];
         }
         
-        Notification notification = NotificationMake(@"Напоминание о билете", message, _datePicker.date, imageURL, [NSNumber numberWithInt:notificationCell.favoriteTicket.flightNumber] );
+        Notification notification = NotificationMake(NSLocalizedString(@"remind_me", @""), message, _datePicker.date, imageURL, [NSNumber numberWithInt:notificationCell.favoriteTicket.flightNumber] );
         [[NotificationCenter sharedInstance] sendNotification:notification];
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Успешно" message:[NSString stringWithFormat:@"Уведомление будет отправлено - %@", _datePicker.date] preferredStyle:(UIAlertControllerStyleAlert)];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"success", @"") message: [NSString stringWithFormat:@"%@ - %@", NSLocalizedString(@"notification_will_be_sent", @""), _datePicker.date] preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"close_message", @"") style:UIAlertActionStyleCancel handler:nil];
         [alertController addAction:cancelAction];
         [self presentViewController:alertController animated:YES completion:nil];
     }
@@ -200,4 +197,3 @@
 
 
 @end
-
