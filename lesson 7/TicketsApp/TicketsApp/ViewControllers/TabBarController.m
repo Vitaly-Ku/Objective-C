@@ -32,17 +32,18 @@
     NSMutableArray<UIViewController*> *controllers = [NSMutableArray new];
         
         MainViewController *mainViewController = [[MainViewController alloc] init];
-        mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Поиск" image:[UIImage systemImageNamed:@"flame"] selectedImage:[UIImage systemImageNamed:@"flame"]];
+    
+        mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"search_tab", @"") image:[UIImage systemImageNamed:@"flame"] selectedImage:[UIImage systemImageNamed:@"flame"]];
         UINavigationController *mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
         [controllers addObject:mainNavigationController];
-        
+    
         MapViewController *mapViewController = [[MapViewController alloc] init];
-        mapViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Карта цен" image:[UIImage systemImageNamed:@"location"] selectedImage:[UIImage systemImageNamed:@"location"]];
+        mapViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"map_tab", @"") image:[UIImage systemImageNamed:@"location"] selectedImage:[UIImage systemImageNamed:@"location"]];
         UINavigationController *mapNavigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
         [controllers addObject:mapNavigationController];
         
-        TicketsViewController *favoriteViewController = [[TicketsViewController alloc] initFavoriteTicketsController];
-        favoriteViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Избранное" image:[UIImage systemImageNamed:@"heart.fill"] selectedImage:[UIImage systemImageNamed:@"heart.fill"]];
+    TicketsViewController *favoriteViewController = [[TicketsViewController alloc] initFavoriteTicketsController];
+    favoriteViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"favorites_tab", @"") image:[UIImage systemImageNamed:@"heart.fill"] selectedImage:[UIImage systemImageNamed:@"heart.fill"]];
         UINavigationController *favoriteNavigationController = [[UINavigationController alloc] initWithRootViewController:favoriteViewController];
         [controllers addObject:favoriteNavigationController];
         

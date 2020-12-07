@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Карта цен";
+    self.title = NSLocalizedString(@"map_tab", @"");
     
     _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     _mapView.showsUserLocation = YES;
@@ -71,7 +71,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
             annotation.title = [NSString stringWithFormat:@"%@ (%@)", price.destination.name, price.destination.code];
-            annotation.subtitle = [NSString stringWithFormat:@"%ld руб.", (long)price.value];
+            annotation.subtitle = [NSString stringWithFormat:@"%ld %@.", (long)price.value, NSLocalizedString(@"rub", @"")];
             annotation.coordinate = price.destination.coordinate;
             [self->_mapView addAnnotation: annotation];
         });
@@ -113,25 +113,25 @@
             firstFoundObject =  filteredArray.count > 0 ? filteredArray.firstObject : nil;
             
             if (firstFoundObject) {
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Действия с билетом" message:@"Хотите добавить в избранное?" preferredStyle:UIAlertControllerStyleActionSheet];
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"actions_with_tickets", @"") message:NSLocalizedString(@"actions_with_tickets_describe", @"") preferredStyle:UIAlertControllerStyleActionSheet];
                 UIAlertAction *favoriteAction;
                 if ([[CoreDataHelper sharedInstance] isFavorite: (Ticket *)firstFoundObject]) {
-                    favoriteAction = [UIAlertAction actionWithTitle:@"Удалить из избранного" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    favoriteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"remove_from_favorite", @"") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
                         [[CoreDataHelper sharedInstance] removeFromFavorite:(Ticket *)firstFoundObject];
                     }];
                 } else {
-                    favoriteAction = [UIAlertAction actionWithTitle:@"Добавить в избранное" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    favoriteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"add_to_favorite", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         [[CoreDataHelper sharedInstance] addToFavoriteFromMap:(Ticket *)firstFoundObject];
                     }];
                 }
                 
-                UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:nil];
+                UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"close", @"") style:UIAlertActionStyleCancel handler:nil];
                 [alertController addAction:favoriteAction];
                 [alertController addAction:cancelAction];
                 [self presentViewController:alertController animated:YES completion:nil];
             }
         } else {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Ошибка!" message:@"Билеты не найдены" preferredStyle: UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"Билеты не найдены" preferredStyle: UIAlertControllerStyleAlert];
             [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
             [self presentViewController:alertController animated:YES completion:nil];
         }
