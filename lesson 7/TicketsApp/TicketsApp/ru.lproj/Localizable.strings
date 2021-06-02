@@ -1,0 +1,46 @@
+
+//  Localizable.strings
+//  TicketsApp
+//
+//  Created by Vit K on 06.12.2020.
+//  Copyright © 2020 Vit K. All rights reserved.
+//
+
+// TabBarController
+
+"search_tab" = "Поиск";
+"map_tab" = "Карта цен";
+"favorites_tab" = "Избранное";
+
+
+// MainViewController
+
+"main_from" = "Откуда";
+"main_to" = "Куда";
+"main_search" = "Найти";
+"oh" = "Увы!";
+"oh_message" = "Билеты не найдены";
+"close_message" = "Закрыть";
+
+// TicketsViewController
+"tickets_title" = "Билеты";
+"add_to_favorite" = "Добавить в избранное";
+"remove_from_favorite" = "Удалить из избранного";
+"remind_me" = "Напоминание о билете";
+"notification_will_be_sent" = "Уведомление будет отправлено";
+"success" = "Успешно";
+"rub" = "руб.";
+"for" = "за";
+"from_map" = "из карты";
+"from_list" = "из списка";
+
+//PlaceViewController
+
+"cities" = "Города";
+"airports" = "Аэропорты";
+
+// Alerts
+"error" = "Ошибка";
+"actions_with_tickets" = "Действия с билетом";
+"actions_with_tickets_describe" = "Хотите добавить в избранное?";
+"not_determine_current_city" = "Не удалось определить текущий город!";
